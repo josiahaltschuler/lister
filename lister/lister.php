@@ -7,6 +7,11 @@ License:		GPL2
 License URI:	https://www.gnu.org/licenses/gpl-2.0.html
 */
 
+// Exit if accessed directly
+if (!defined('ABSPATH')) {
+	exit;
+}
+
 function lister_list_posts( $attributes ) {
 	
 	ob_start();
@@ -91,4 +96,3 @@ function lister_list_posts( $attributes ) {
 	return $myvariable;
 }
 add_shortcode( 'lister', 'lister_list_posts' );
-
